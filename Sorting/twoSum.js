@@ -1,3 +1,4 @@
+
 /* 
     Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -16,18 +17,21 @@
     link: https://leetcode.com/problems/two-sum/
 */
 
-const twoSum = (nums, target) => {
-    let temp = new Map();
-    for (let i = 0; i < nums.length; i++) {
-        console.log([i, temp.get(nums[i])])
-        if (temp.has(target - nums[i])) {
-            
-            return [i, temp.get(target - nums[i])];
+function two_sum(numbers, target) {
+    let numbersMap = new Map();
+    for(let i = 0; i < numbers.length; i++) {
+        let difference = target - numbers[i];
+
+        if(numbersMap.has(difference)) {
+            console.log([i, numbersMap.get(difference)]);
+            return [i, numbersMap.get(difference)];
         }
-        temp.set(nums[i], i);
-        console.log(temp.size)
+
+        numbersMap.set(numbers[i], i);
     }
-};
+    console.log([-1, -1])
+    return [-1, -1];
+}
 
-twoSum([2,7,11,15], 9)
 
+two_sum([5, 3, 10, 45, 1], 6);
