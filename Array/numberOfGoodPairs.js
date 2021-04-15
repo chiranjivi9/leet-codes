@@ -14,8 +14,9 @@
 
 const numIdenticalPairs = (nums) => {
     let count = 0;
-    // console.log('nums length: ', nums.length - 2);
+
     nums.sort();
+    
     for (i = 0; i < nums.length; i++) {
         for (j = i + 1; j < nums.length; j++) {
           if (nums[i] === nums[j]) {
