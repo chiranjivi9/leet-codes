@@ -17,7 +17,7 @@
     link: https://leetcode.com/problems/two-sum/
 */
 
-function two_sum(numbers, target) {
+// function two_sum(numbers, target) {
     let numbersMap = new Map();
     for(let i = 0; i < numbers.length; i++) {
         let difference = target - numbers[i];
@@ -35,3 +35,21 @@ function two_sum(numbers, target) {
 
 
 two_sum([5, 3, 10, 45, 1], 6);
+
+// let arrayAsValueInMap = (arr) => {
+//     let hm = new Map();
+    
+//     for(let i = 0; i < arr.length; i++) {
+//         if(!hm.has(arr[i])) {
+//             hm.set(arr[i], [arr[i]]);
+//         } else {
+//             let temp = hm.get(arr[i]);
+//             temp.push(arr[i]);
+//             hm.set(arr[i], temp);
+//         }
+//     }
+
+//     console.log(hm);
+// }
+
+// arrayAsValueInMap([1,2,2,2,3,4,5,7,9,10,10]);
