@@ -17,6 +17,7 @@
 const pluralize = (array) => {
     let pluralObj = {};
     let pluralArr = [];
+    
     array.forEach((item) => {
         if(!pluralObj[item]) {
             pluralObj[item] = 1;
