@@ -7,6 +7,7 @@
     Merge the first array into the second and return the latter. You should get 2n
     positive integers sorted in the non-descending order.
 
+    
     Example
         {
             "first": [1, 3, 5],

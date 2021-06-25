@@ -17,7 +17,7 @@
     link: https://leetcode.com/problems/two-sum/
 */
 
-// function two_sum(numbers, target) {
+function two_sum(numbers, target) {
     let numbersMap = new Map();
     for(let i = 0; i < numbers.length; i++) {
         let difference = target - numbers[i];

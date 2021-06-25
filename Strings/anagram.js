@@ -18,7 +18,8 @@ var isAnagram = function(s, t) {
     for (let char of t) tMap[char] = tMap[char] + 1 || 1;
         
     for (let key in sMap){
-        if (sMap[key] !== tMap[key]) return false; //Char freq must match between s and t for there to be a valid anagram
+        //Char freq must match between s and t for there to be a valid anagram
+        if (sMap[key] !== tMap[key]) return false; 
     }
     return true;
 };

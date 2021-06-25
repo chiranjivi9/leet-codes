@@ -89,5 +89,11 @@ function countComponents(n, edges){
 
 
 
-countComponents(5, [[0, 1], [1, 2], [3, 4]]);
+// countComponents(5, [[0, 1], [1, 2], [3, 4]]);
 // countComponents(5, [[0, 1], [1, 2], [2, 3], [3, 4]]);
+countComponents(6, [
+    [ 1, 2 ], [ 1, 3 ],
+    [ 1, 4 ], [ 2, 5 ],
+    [ 3, 6 ], [ 4, 3 ],
+    [ 4, 6 ], [ 5, 6 ]
+  ])
