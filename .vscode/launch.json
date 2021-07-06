@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Array/moveZeros.js"
+            "program": "${workspaceFolder}/Strings/spotTheDiff.js"
         }
     ]
 }

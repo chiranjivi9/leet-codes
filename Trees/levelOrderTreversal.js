@@ -19,33 +19,38 @@ class Node {
 }
 
 class Tree {
-    constructor(){
+    constructor() {
         this.root = null;
     }
 }
 
-function level_order_traversal(root){
-    if(!root) return [];
-    
-    let node = root;
+function level_order_traversal(root) {
+    if (!root) return [];
+
     let data = []
     let q = [];
-    q.push(node);
+    q.push(root);
 
-    while(q.length) {
-        // let temp = [];
-        node = q.shift();
-        // temp.push(node.val);
-        if(node.left){
-            q.push(node.left);
+    while (q.length) {
+        let nodes = q.length;
+        const temp = [];
+
+        for (let i = 0; i < nodes; i++) {
+            let node = q.shift();
+
+            temp.push(node.val);
+
+            if (node.left) {
+                q.push(node.left);
+            }
+
+            if (node.right) {
+                q.push(node.right);
+            }
         }
-
-        if(node.right) {
-            q.push(node.right);
-        }
-
-        data.push(node.val);
+        data.push(temp);
     }
+
     console.log(data);
     return data;
 }
@@ -62,3 +67,7 @@ tree.root.right.right = new Node(24)
 
 
 level_order_traversal(tree.root);
+
+// 10
+// 6            15
+// 3       7    12      24
