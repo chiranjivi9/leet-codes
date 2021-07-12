@@ -1,5 +1,6 @@
 /*
-    This question is asked by Amazon. Given two strings representing sentences,
+    This question is asked by Amazon.
+    Given two strings representing sentences,
     return the words that are not common to both strings (i.e. the words that
     only appear in one of the sentences). You may assume that each sentence
     is a sequence of words (without punctuation) correctly separated using
