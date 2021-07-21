@@ -9,30 +9,33 @@ let permutation = (arr) => {
     if (arr.length < 1) return [];
     let res = [];
 
-    function helper(slate, placed, res) {
-        if (placed >= slate.length) {
-            res.push(new Array(...slate));
+    function helper(input, idx, slate) {
+        //base
+        if (idx === input.length) {
+            res.push(slate.slice(0, slate.length));
         } else {
-            //recursion
-            for (let idx = placed; idx < slate.length; idx++) {
-                // swap idx element with 0th element;
-                swap(slate, idx, placed);
-                helper(slate, idx + 1, res);
-                swap(slate, placed, idx);
+            // recursion
+            for (let i = idx; i < input.length; i++) {
+
+                swap(input, idx, i);
+                slate.push(input[idx]);
+                helper(input, idx + 1, slate);
+                slate.pop();
+                swap(input, i, idx);
             }
         }
     }
 
-    helper(arr, 0, res);
-
-    console.log(res);
-
-    function swap(input, idx1, idx2) {
-        let temp = input[idx1];
-        input[idx1] = input[idx2];
-        input[idx2] = temp
-        return input;
+    function swap(input, idxA, idxB) {
+        let temp = input[idxA];
+        input[idxA] = input[idxB];
+        input[idxB] = temp;
     }
+
+    helper(arr, 0, []);
+    console.log(res);
 }
+
+permutation([1, 2, 3]);
 
 permutation(['H', 'A', 'T']);

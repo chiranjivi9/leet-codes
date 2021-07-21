@@ -68,6 +68,6 @@ tree.root.right.right = new Node(24)
 
 level_order_traversal(tree.root);
 
-// 10
-// 6            15
-// 3       7    12      24
+//            10
+//      6            15
+//  3       7    12      24
